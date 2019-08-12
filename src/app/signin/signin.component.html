@@ -1,0 +1,100 @@
+<!-- 
+<div>
+    <img src="http://localhost:4200/assets/bgimg.jpg" class="w-100 h-100">
+  
+    
+        
+  
+<div class="center">
+
+  <div class="jumbotron py-4 mr-3 my-img">
+
+    <form class="mb-4" #addForm="ngForm" (ngSubmit)="loginUsers(addForm)">
+      <div class="text-center">
+        <h4>Sign in to continue</h4>
+      </div>
+      <div class="form-group">
+        <div class="imgcontainer">
+          <img src="./assets/avatar.png" alt="Avatar" class="avatar">
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="enter username" name="name" #name="ngModel"
+          [(ngModel)]="newUsers.username" required>
+        <div class="alert alert-danger" *ngIf="name.dirty && name.invalid">
+          <strong>Oh snap!</strong>
+          User Name can't be empty !
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="enter password" name="password" #password="ngModel"
+          [(ngModel)]="newUsers.password" required>
+        <div class="alert alert-danger" *ngIf="password.dirty && password.invalid">
+          <strong>Oh snap!</strong>
+          Password can't be empty !
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="addForm.pristine || addForm.invalid">Signin</button>
+
+      <div class="alert alert-success mt-3" *ngIf="successFlag&&addForm.pristine">
+        <i class="fas fa-circle-notch fa-spin fa-lg mr-3"></i>
+        <strong>Hang On!</strong> You are being redirected to the home page.
+      </div>
+
+      <div class="alert alert-danger mt-3" *ngIf="errorFlag&&addForm.pristine">
+        <i class="fas fa-exclamation-circle fa-lg mr-3"></i>
+        <strong>Oops!</strong> Your credentials couldn't be verified. Please try again !
+      </div>
+    </form>
+    <p>New User?
+      <a [routerLink]="['/signup']" class="btn btn-link">Register</a>
+    </p>
+  </div>
+</div>
+ -->
+ <div>
+    <img src="http://localhost:4200/assets/mac.jpg" class="w-100 h-100">
+<div class="center">
+
+  <div class=" my-img">
+ <div class="user">
+    <header class="user__header">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
+        <h1 class="user__title">  Sign-in to Continue !</h1>
+    </header>
+    
+    <form class="form" #addForm="ngForm" (ngSubmit)="loginUsers(addForm)" >
+        <div class="form__group">
+            <input type="text" class="form__input" placeholder="enter username" name="name" #name="ngModel"
+            [(ngModel)]="newUsers.username" required>
+          <div class="alert alert-danger" *ngIf="name.dirty && name.invalid">
+            <strong>Oh snap!</strong>
+            User Name can't be empty !
+          </div>
+        </div>
+      <hr>
+        
+        <div class="form__group">
+            <input type="password"  class="form__input" placeholder="enter password" name="password" #password="ngModel"
+            [(ngModel)]="newUsers.password" required>
+          <div class="alert alert-danger" *ngIf="password.dirty && password.invalid">
+            <strong>Oh snap!</strong>
+            Password can't be empty !
+          </div>
+        </div>
+        
+        <button type="submit" class="btn" [disabled]="addForm.pristine || addForm.invalid">Signin</button>
+    </form>
+    <div class="alert alert-success mt-3" *ngIf="successFlag">
+        <i class="fas fa-circle-notch fa-spin fa-lg mr-3"></i>
+        <strong>Hang On!</strong> You are being redirected to the home page.
+      </div>
+
+      <div class="alert alert-danger mt-3" *ngIf="errorFlag">
+        <i class="fas fa-exclamation-circle fa-lg mr-3"></i>
+        <strong>Oops!</strong> Can't Sign-In. Please try again !
+      </div>
+</div>
+</div>
+</div>

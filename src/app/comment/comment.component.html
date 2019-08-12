@@ -1,0 +1,31 @@
+<div class="container mt-2">
+  <div class="jumbotron py-4">
+    <p class="h1 text-center">Comments</p>
+  </div>
+
+  <div class="jumbotron py-4">
+
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center"
+        *ngFor="let comment of postsService.comments;let i=index">
+        {{comment.commentText}}
+        <button class="btn btn-link p-0" (click)="deleteComment(comment.commentId,i)">
+          <i class="fas fa-trash-alt text-danger"></i>
+        </button>
+      </li>
+      <hr>
+    </ul>
+    
+  </div>
+    <form class="mb-4" #addForm="ngForm" (ngSubmit)="addComment(addForm)">
+      <fieldset>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="enter comment" name="commentText" #commentText="ngModel"
+            [(ngModel)]="comment.commentText" required>
+          <p class="h6 text-danger mt-2" *ngIf="commentText.dirty && commentText.invalid">Comment can't be empty</p>
+        </div>
+        <button type="submit" class="btn btn-secondary" [disabled]="addForm.pristine || addForm.invalid">Submit</button>
+
+      </fieldset>
+    </form>
+  </div>

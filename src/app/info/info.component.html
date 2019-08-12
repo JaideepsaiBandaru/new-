@@ -1,0 +1,25 @@
+
+         <div>
+         <img src="http://localhost:4200/assets/bgi.jpg" class="w-100 h-100">
+       
+         <div class=" my-img">
+       
+<div class="card mb-3 mt-4">
+    <h3 class="card-header">Personal Details</h3>
+    <img class="rounded-circle" src="http://localhost:4200/assets/avatar.png "
+        alt="Card image">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{authService.currentUser.user.id}}</li>
+        <li class="list-group-item">{{authService.currentUser.user.username}}</li>
+        <li class="list-group-item">{{authService.currentUser.user.firstName}}</li>
+        <li class="list-group-item">{{authService.currentUser.user.lastName}}</li>
+        <li class="list-group-item">{{authService.currentUser.user.mnumber}}</li>
+
+    </ul>
+    <button class="btn btn-link p-0 mr-3" data-toggle="modal" attr.data-target="#exampleModal{{authService.currentUser.user.id}}">
+        Edit
+    </button>
+    <app-editinfo [editedInfo]="userCopy(authService.currentUser.user)"></app-editinfo>
+</div>
+</div>
+</div>

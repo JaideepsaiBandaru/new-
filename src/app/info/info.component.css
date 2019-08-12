@@ -1,0 +1,21 @@
+.card{
+    top: 10%;
+    width: 450px;
+left:35%
+}
+
+.my-img {
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    width: 25%;
+    z-index: 98;
+  }
+ .rounded-circle{
+     
+     align-self: center;
+    left:20%;
+     height: 200px;
+      width: 80%;
+       display: block;
+ }

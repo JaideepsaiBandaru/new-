@@ -1,0 +1,212 @@
+<!-- <img src="http://localhost:4200/assets/bgimg.jpg" class="w-100 h-100">
+ 
+   <div class="jumbotron py-2  my-img">
+<form id="msform">
+
+  <ul id="progressbar">
+    <li class="active">Account Setup</li>
+    <li>Personal Details</li>
+  </ul>
+  <fieldset>
+    <h2 class="fs-title">Create your account</h2>
+    <h3 class="fs-subtitle">This is step 1</h3>
+    <input type="text" class="form-control" placeholder="Enter User Name" name="username" #userName="ngModel" [(ngModel)]="user.username"
+                  required>
+                <div class="alert alert-danger" *ngIf="username.dirty && username.invalid">
+                  <strong>Oh snap!</strong>
+                  User Name can't be empty !
+                </div>
+                <input type="password" class="form-control" placeholder="Enter Password" name="password" #password="ngModel" [(ngModel)]="user.password"
+                required>
+              <div class="alert alert-danger" *ngIf="password.dirty && password.invalid">
+                <strong>Oh snap!</strong>
+                Password can't be empty !
+              </div>
+              <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Enter Password" name="password" #password="ngModel" [(ngModel)]="user.password"
+                  required>
+                <div class="alert alert-danger" *ngIf="password.dirty && password.invalid">
+                  <strong>Oh snap!</strong>
+                  Password can't be empty !
+                </div>
+              </div>
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Personal Details</h2>
+    <h3 class="fs-subtitle">We will never sell it</h3>
+    <input type="text" name="fname" placeholder="First Name" />
+    <input type="text" name="lname" placeholder="Last Name" />
+    <input type="text" name="phone" placeholder="Phone" />
+    <textarea name="address" placeholder="Address"></textarea>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+  </fieldset>
+</form>
+</div> -->
+
+
+<!-- 
+<div>
+  <img src="http://localhost:4200/assets/bgimg.jpg" class="w-100 h-100">
+  <div class="center">
+
+    <div class=" my-img">
+      <div class="user">
+        <header class="user__header">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
+          <h1 class="user__title"> Sign-Up with US !</h1>
+        </header>
+
+        <form class="form" #addForm="ngForm" (ngSubmit)="addUsers(addForm)">
+          <div class="form__group">
+            <input type="text" class="form__input" placeholder="First name" name="fname" #fname="ngModel"
+              [(ngModel)]="newUsers.fname" required>
+            <div class="alert alert-danger" *ngIf="fname.dirty && fname.invalid">
+              <strong>Oh snap!</strong>
+              First name can't be empty !
+            </div>
+
+          </div>
+          <hr>
+          <div class="form__group">
+            <input type="text" class="form__input" placeholder="Last name" name="lname" #lname="ngModel"
+              [(ngModel)]="newUsers.lname" required>
+            <div class="alert alert-danger" *ngIf="lname.dirty && lname.invalid">
+              <strong>Oh snap!</strong>
+              Last name can't be empty !
+            </div>
+
+          </div>
+          <hr>
+          <div class="form__group">
+            <input type="mobile" class="form__input" placeholder="Mobile number" name="mnumber" #mnumber="ngModel"
+              [(ngModel)]="newUsers.mnumber" required>
+            <div class="alert alert-danger" *ngIf="mnumber.dirty && mnumber.invalid">
+              <strong>Oh snap!</strong>
+              Mobile number can't be empty !
+            </div>
+
+          </div>
+          <hr>
+          <div class="form__group">
+            <input type="text" class="form__input" placeholder="Username" name="name" #name="ngModel"
+              [(ngModel)]="newUsers.username" required>
+            <div class="alert alert-danger" *ngIf="name.dirty && name.invalid">
+              <strong>Oh snap!</strong>
+              User Name can't be empty !
+            </div>
+          </div>
+          <hr>
+
+          <div class="form__group">
+            <input type="password" class="form__input" placeholder="Password" name="password" #password="ngModel"
+              ng-minlength="8" ng-maxlength="20" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/"
+              [(ngModel)]="newUsers.password" required>
+            <div class="alert alert-danger" *ngIf="password.dirty && password.invalid">
+              <strong>Oh snap!</strong>
+              Password can't be empty !
+            </div>
+
+          </div>
+          <hr>
+          <div class="form__group">
+            <input type="password" class="form__input" placeholder="Confirm password" name="cpassword"
+              #cpassword="ngModel" [(ngModel)]="newUsers.password" required>
+            <div class="alert alert-danger" *ngIf="cpassword.dirty && cpassword.invalid">
+              <strong>Oh snap!</strong>
+              Confirm Password can't be empty !
+            </div>
+
+          </div>
+          <hr>
+          <button type="submit" class="btn" [disabled]="addForm.pristine || addForm.invalid">SignUp</button>
+        </form>
+      </div> -->
+
+
+<div>
+  <img src="http://localhost:4200/assets/i1.jpg" class="w-100 h-100">
+  <div class="center">
+
+    <div class=" my-img">
+      <div class="user">
+        <header class="user__header">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
+          <h1 class="user__title"> Sign-up to Continue !</h1>
+        </header>
+
+        <form class="form" #signUpForm="ngForm" (ngSubmit)="signUpSubmit(signUpForm)">
+          <div class="form__group">
+            <input type="text" class="form__inputt" placeholder="First name" name="firstName" #firstName="ngModel"
+              [(ngModel)]="user.firstName" required>
+            <div class="alert alert-danger" *ngIf="firstName.dirty && firstName.invalid">
+              <strong>Oh snap!</strong>
+              First name can't be empty !
+            </div>
+          </div>
+          <hr>
+
+          <div class="form__group">
+            <input type="text" class="form__input" placeholder="Last name" name="lastName" #lastName="ngModel"
+              [(ngModel)]="user.lastName" required>
+            <div class="alert alert-danger" *ngIf="lastName.dirty && lastName.invalid">
+              <strong>Oh snap!</strong>
+              Last name can't be empty !
+            </div>
+
+          </div>
+          <hr>
+          <div class="form__group">
+            <input type="text" maxlength="10" class="form__input" placeholder="Mobile number" name="mnumber"
+              #mnumber="ngModel" [(ngModel)]="user.mnumber" required>
+            <div class="alert alert-danger" *ngIf="mnumber.dirty && mnumber.invalid">
+              <strong>Oh snap!</strong>
+              Invalid Mobile number
+            </div>
+
+          </div>
+          <hr>
+          <div class="form__group">
+            <input type="text" class="form__input" placeholder="User Name" name="username" #username="ngModel"
+              [(ngModel)]="user.username" required>
+            <div class="alert alert-danger" *ngIf="username.dirty && username.invalid">
+              <strong>Oh snap!</strong>
+              User Name can't be empty !
+            </div>
+          </div>
+          <hr>
+          <div class="form__group">
+            <input type="password" class="form__input" placeholder="Password" name="password" #password="ngModel"
+              [(ngModel)]="user.password" required minlength="8">
+
+            <div class="alert alert-danger" *ngIf="password.dirty && password.invalid && password.errors.required">
+              <strong>Oh snap!</strong>
+              Password can't be empty !
+            </div>
+
+            <div class="alert alert-danger" *ngIf="password.dirty && password.invalid && password.errors.minlength">
+              <strong>Oh snap!</strong>
+              Password's min length !
+            </div>
+
+           
+            </div>
+          
+          <hr>
+          <button class="btn" type="submit" [disabled]="signUpForm.pristine || signUpForm.invalid">Sign
+            Up</button>
+        </form>
+        <div class="alert alert-success mt-3" *ngIf="successFlag">
+          <i class="fas fa-circle-notch fa-spin fa-lg mr-3"></i>
+          <strong>Hang On!</strong> You are being redirected to the home page.
+        </div>
+
+        <div class="alert alert-danger mt-3" *ngIf="errorFlag">
+          <i class="fas fa-exclamation-circle fa-lg mr-3"></i>
+          <strong>Oops!</strong> Couldn't create an account. Please try again !
+        </div>
+      </div>
+    </div>
+  </div>
+  
